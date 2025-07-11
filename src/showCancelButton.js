@@ -140,31 +140,31 @@ export const cancellation = (actor, payload) => {
   switch (domain) {
     case "ONDC:RET10":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET11":
       CEB = 0;
       break;
     case "ONDC:RET12":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET13":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET14":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     default:
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
   }
 
   const allItemsCancellable = items.every(
@@ -281,31 +281,31 @@ export const forceCancellation = (
   switch (domain) {
     case "ONDC:RET10":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET11":
       CEB = 0;
       break;
     case "ONDC:RET12":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET13":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     case "ONDC:RET14":
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
       break;
     default:
       CEB = hyperlocalFlag
-        ? deliveryPromiseETA
-        : Math.min(0.5 * deliveryPromiseETA, 2880 * 60 * 1000);
+        ? fulfillmentTAT
+        : Math.min(0.5 * fulfillmentTAT, 2880 * 60 * 1000);
   }
 
   if (actor === "buyer") {
@@ -394,31 +394,31 @@ export const autoForceCancellation = (
   switch (domain) {
     case "ONDC:RET10":
       ATB = hyperlocalFlag
-        ? Math.min(deliveryPromiseETA, 720 * 60 * 1000)
-        : Math.min(0.5 * deliveryPromiseETA, 10080 * 60 * 1000);
+        ? Math.min(fulfillmentTAT, 720 * 60 * 1000)
+        : Math.min(0.5 * fulfillmentTAT, 10080 * 60 * 1000);
       break;
     case "ONDC:RET11":
       ATB = 120 * 60 * 1000;
       break;
     case "ONDC:RET12":
       ATB = hyperlocalFlag
-        ? Math.min(deliveryPromiseETA, 720 * 60 * 1000)
-        : Math.min(0.5 * deliveryPromiseETA, 10080 * 60 * 1000);
+        ? Math.min(fulfillmentTAT, 720 * 60 * 1000)
+        : Math.min(0.5 * fulfillmentTAT, 10080 * 60 * 1000);
       break;
     case "ONDC:RET13":
       ATB = hyperlocalFlag
-        ? Math.min(deliveryPromiseETA, 720 * 60 * 1000)
-        : Math.min(0.5 * deliveryPromiseETA, 10080 * 60 * 1000);
+        ? Math.min(fulfillmentTAT, 720 * 60 * 1000)
+        : Math.min(0.5 * fulfillmentTAT, 10080 * 60 * 1000);
       break;
     case "ONDC:RET14":
       ATB = hyperlocalFlag
-        ? Math.min(deliveryPromiseETA, 720 * 60 * 1000)
-        : Math.min(0.5 * deliveryPromiseETA, 10080 * 60 * 1000);
+        ? Math.min(fulfillmentTAT, 720 * 60 * 1000)
+        : Math.min(0.5 * fulfillmentTAT, 10080 * 60 * 1000);
       break;
     default:
       ATB = hyperlocalFlag
-        ? Math.min(deliveryPromiseETA, 720 * 60 * 1000)
-        : Math.min(0.5 * deliveryPromiseETA, 10080 * 60 * 1000);
+        ? Math.min(fulfillmentTAT, 720 * 60 * 1000)
+        : Math.min(0.5 * fulfillmentTAT, 10080 * 60 * 1000);
   }
 
   if (
