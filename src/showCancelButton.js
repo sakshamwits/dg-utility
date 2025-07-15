@@ -89,7 +89,9 @@ export const cancellation = (actor, payload) => {
     return false;
   }
 
-  if (notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)) {
+  if (
+    notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)
+  ) {
     return false;
   }
 
@@ -230,7 +232,9 @@ export const forceCancellation = (
     return false;
   }
 
-  if (notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)) {
+  if (
+    notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)
+  ) {
     return false;
   }
 
@@ -343,7 +347,9 @@ export const autoForceCancellation = (
     return false;
   }
 
-  if (notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)) {
+  if (
+    notCancellableState.includes(deliveryFulfillment?.state?.descriptor?.code)
+  ) {
     return false;
   }
 

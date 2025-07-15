@@ -341,7 +341,7 @@ export const refund = (
           charge?.quote?.totalOrderValueAfterSubsidyBeforeCoupon -
           charge?.quote?.totalOrderValueAfterSubsidy;
 
-        const mov = charge?.quote?.mov || charge?.history[0]?.mov;
+        const mov = charge?.quote?.couponMov || charge?.history[0]?.couponMov;
 
         const cancelledItemAmount =
           charge?.quote?.itemsList?.find(
@@ -482,7 +482,7 @@ export const refund = (
           charge?.quote?.totalOrderValueAfterSubsidyBeforeCoupon -
           charge?.quote?.totalOrderValueAfterSubsidy;
 
-        const mov = charge?.quote?.mov || charge?.history[0]?.mov;
+        const mov = charge?.quote?.couponMov || charge?.history[0]?.couponMov;
 
         const cancelledItemAmount =
           charge?.quote?.itemsList?.find(
